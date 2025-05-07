@@ -122,6 +122,145 @@ $no-palette: ("white", "black", "light", "dark");
   );
 }
 
+// Alias español para botón
+.#{iv.$class-prefix}boton {
+  @extend .#{iv.$class-prefix}button;
+
+  // Alias para modificadores de botón
+  &.es-primario {
+    @extend .#{iv.$class-prefix}is-primary;
+  }
+  &.es-enlace {
+    @extend .#{iv.$class-prefix}is-link;
+  }
+  &.es-info {
+    @extend .#{iv.$class-prefix}is-info;
+  }
+  &.es-exito {
+    @extend .#{iv.$class-prefix}is-success;
+  }
+  &.es-advertencia {
+    @extend .#{iv.$class-prefix}is-warning;
+  }
+  &.es-peligro {
+    @extend .#{iv.$class-prefix}is-danger;
+  }
+  &.es-claro {
+    @extend .#{iv.$class-prefix}is-light;
+  }
+  &.es-oscuro {
+    @extend .#{iv.$class-prefix}is-dark;
+  }
+  &.es-blanco {
+    @extend .#{iv.$class-prefix}is-white;
+  }
+  &.es-negro {
+    @extend .#{iv.$class-prefix}is-black;
+  }
+
+  // Alias para otros modificadores comunes
+  &.es-pequeno {
+    @extend .#{iv.$class-prefix}is-small;
+  }
+  &.es-normal {
+    @extend .#{iv.$class-prefix}is-normal;
+  }
+  &.es-mediano {
+    @extend .#{iv.$class-prefix}is-medium;
+  }
+  &.es-grande {
+    @extend .#{iv.$class-prefix}is-large;
+  }
+  &.es-texto {
+    @extend .#{iv.$class-prefix}is-text;
+  }
+  &.es-fantasma {
+    @extend .#{iv.$class-prefix}is-ghost;
+  }
+  &.es-delineado {
+    @extend .#{iv.$class-prefix}is-outlined;
+  }
+  &.es-redondeado {
+    @extend .#{iv.$class-prefix}is-rounded;
+  }
+  &.es-anchocompleto {
+    @extend .#{iv.$class-prefix}is-fullwidth;
+  }
+  &.es-cargando {
+    @extend .#{iv.$class-prefix}is-loading;
+  }
+  &.es-estatico {
+    @extend .#{iv.$class-prefix}is-static;
+  }
+  &.es-enfocado {
+    @extend .#{iv.$class-prefix}is-focused;
+  }
+  &.es-activo {
+    @extend .#{iv.$class-prefix}is-active;
+  }
+  &.es-foco {
+    @extend .#{iv.$class-prefix}is-focused;
+  }
+  &.es-suave {
+    @extend .#{iv.$class-prefix}is-soft;
+  }
+  &.es-negrita {
+    @extend .#{iv.$class-prefix}is-bold;
+  }
+}
+
+.#{iv.$class-prefix}buttons {
+  @extend %block;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+
+  // Sizes
+  &.#{iv.$class-prefix}are-small {
+    @include cv.register-vars(
+      (
+        "control-size": #{cv.getVar("size-small")},
+        "control-radius": #{cv.getVar("radius-small")},
+      )
+    );
+  }
+
+  &.#{iv.$class-prefix}are-medium {
+    @include cv.register-vars(
+      (
+        "control-size": #{cv.getVar("size-medium")},
+        "control-radius": #{cv.getVar("radius-medium")},
+      )
+    );
+  }
+
+  &.#{iv.$class-prefix}are-large {
+    @include cv.register-vars(
+      (
+        "control-size": #{cv.getVar("size-large")},
+        "control-radius": #{cv.getVar("radius")},
+      )
+    );
+  }
+}
+
+// Alias español para grupo de botones
+.#{iv.$class-prefix}botones {
+  @extend .#{iv.$class-prefix}buttons;
+
+  &.son-pequenos {
+    @extend .#{iv.$class-prefix}are-small;
+  }
+  &.son-medianos {
+    @extend .#{iv.$class-prefix}are-medium;
+  }
+  &.son-grandes {
+    @extend .#{iv.$class-prefix}are-large;
+  }
+}
+
 .#{iv.$class-prefix}button {
   @include cv.register-vars(
     (

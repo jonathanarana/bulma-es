@@ -3325,7 +3325,7 @@ a.bulma-box:active {
   box-shadow: var(--bulma-box-link-active-shadow);
 }
 
-.bulma-button {
+.bulma-button, .bulma-boton {
   --bulma-button-family: false;
   --bulma-button-weight: var(--bulma-weight-medium);
   --bulma-button-border-color: var(--bulma-border);
@@ -3432,6 +3432,39 @@ a.bulma-box:active {
   box-shadow: var(--bulma-button-disabled-shadow);
   opacity: var(--bulma-button-disabled-opacity);
 }
+.bulma-button .bulma-button.is-white.bulma-is-white,
+.bulma-button .bulma-boton.es-white.bulma-is-white {
+  --bulma-button-h: var(--bulma-white-h);
+  --bulma-button-s: var(--bulma-white-s);
+  --bulma-button-l: var(--bulma-white-l);
+  --bulma-button-background-l: var(--bulma-white-l);
+  --bulma-button-border-l: var(--bulma-white-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-white-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-white.bulma-is-white:focus-visible, .bulma-button .bulma-button.is-white.bulma-is-white.bulma-is-focused,
+.bulma-button .bulma-boton.es-white.bulma-is-white:focus-visible,
+.bulma-button .bulma-boton.es-white.bulma-is-white.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-white.bulma-is-white.bulma-is-soft,
+.bulma-button .bulma-boton.es-white.bulma-is-white.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-white.bulma-is-white.bulma-is-bold,
+.bulma-button .bulma-boton.es-white.bulma-is-white.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-white.bulma-is-white[disabled], fieldset[disabled] .bulma-button .bulma-button.is-white.bulma-is-white,
+.bulma-button .bulma-boton.es-white.bulma-is-white[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-white.bulma-is-white {
+  background-color: var(--bulma-white);
+  border-color: var(--bulma-white);
+  box-shadow: none;
+}
 .bulma-button.bulma-is-white {
   --bulma-button-h: var(--bulma-white-h);
   --bulma-button-s: var(--bulma-white-s);
@@ -3456,6 +3489,39 @@ a.bulma-box:active {
 .bulma-button.bulma-is-white[disabled], fieldset[disabled] .bulma-button.bulma-is-white {
   background-color: var(--bulma-white);
   border-color: var(--bulma-white);
+  box-shadow: none;
+}
+.bulma-button .bulma-button.is-black.bulma-is-black,
+.bulma-button .bulma-boton.es-black.bulma-is-black {
+  --bulma-button-h: var(--bulma-black-h);
+  --bulma-button-s: var(--bulma-black-s);
+  --bulma-button-l: var(--bulma-black-l);
+  --bulma-button-background-l: var(--bulma-black-l);
+  --bulma-button-border-l: var(--bulma-black-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-black-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-black.bulma-is-black:focus-visible, .bulma-button .bulma-button.is-black.bulma-is-black.bulma-is-focused,
+.bulma-button .bulma-boton.es-black.bulma-is-black:focus-visible,
+.bulma-button .bulma-boton.es-black.bulma-is-black.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-black.bulma-is-black.bulma-is-soft,
+.bulma-button .bulma-boton.es-black.bulma-is-black.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-black.bulma-is-black.bulma-is-bold,
+.bulma-button .bulma-boton.es-black.bulma-is-black.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-black.bulma-is-black[disabled], fieldset[disabled] .bulma-button .bulma-button.is-black.bulma-is-black,
+.bulma-button .bulma-boton.es-black.bulma-is-black[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-black.bulma-is-black {
+  background-color: var(--bulma-black);
+  border-color: var(--bulma-black);
   box-shadow: none;
 }
 .bulma-button.bulma-is-black {
@@ -3484,6 +3550,39 @@ a.bulma-box:active {
   border-color: var(--bulma-black);
   box-shadow: none;
 }
+.bulma-button .bulma-button.is-light.bulma-is-light,
+.bulma-button .bulma-boton.es-light.bulma-is-light {
+  --bulma-button-h: var(--bulma-light-h);
+  --bulma-button-s: var(--bulma-light-s);
+  --bulma-button-l: var(--bulma-light-l);
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-border-l: var(--bulma-light-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-light-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-light.bulma-is-light:focus-visible, .bulma-button .bulma-button.is-light.bulma-is-light.bulma-is-focused,
+.bulma-button .bulma-boton.es-light.bulma-is-light:focus-visible,
+.bulma-button .bulma-boton.es-light.bulma-is-light.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-light.bulma-is-light.bulma-is-soft,
+.bulma-button .bulma-boton.es-light.bulma-is-light.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-light.bulma-is-light.bulma-is-bold,
+.bulma-button .bulma-boton.es-light.bulma-is-light.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-light.bulma-is-light[disabled], fieldset[disabled] .bulma-button .bulma-button.is-light.bulma-is-light,
+.bulma-button .bulma-boton.es-light.bulma-is-light[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-light.bulma-is-light {
+  background-color: var(--bulma-light);
+  border-color: var(--bulma-light);
+  box-shadow: none;
+}
 .bulma-button.bulma-is-light {
   --bulma-button-h: var(--bulma-light-h);
   --bulma-button-s: var(--bulma-light-s);
@@ -3510,6 +3609,39 @@ a.bulma-box:active {
   border-color: var(--bulma-light);
   box-shadow: none;
 }
+.bulma-button .bulma-button.is-dark.bulma-is-dark,
+.bulma-button .bulma-boton.es-dark.bulma-is-dark {
+  --bulma-button-h: var(--bulma-dark-h);
+  --bulma-button-s: var(--bulma-dark-s);
+  --bulma-button-l: var(--bulma-dark-l);
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-border-l: var(--bulma-dark-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-dark-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-dark.bulma-is-dark:focus-visible, .bulma-button .bulma-button.is-dark.bulma-is-dark.bulma-is-focused,
+.bulma-button .bulma-boton.es-dark.bulma-is-dark:focus-visible,
+.bulma-button .bulma-boton.es-dark.bulma-is-dark.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-dark.bulma-is-dark.bulma-is-soft,
+.bulma-button .bulma-boton.es-dark.bulma-is-dark.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-dark.bulma-is-dark.bulma-is-bold,
+.bulma-button .bulma-boton.es-dark.bulma-is-dark.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-dark.bulma-is-dark[disabled], fieldset[disabled] .bulma-button .bulma-button.is-dark.bulma-is-dark,
+.bulma-button .bulma-boton.es-dark.bulma-is-dark[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-dark.bulma-is-dark {
+  background-color: var(--bulma-dark);
+  border-color: var(--bulma-dark);
+  box-shadow: none;
+}
 .bulma-button.bulma-is-dark {
   --bulma-button-h: var(--bulma-dark-h);
   --bulma-button-s: var(--bulma-dark-s);
@@ -3534,6 +3666,49 @@ a.bulma-box:active {
 .bulma-button.bulma-is-dark[disabled], fieldset[disabled] .bulma-button.bulma-is-dark {
   background-color: var(--bulma-dark);
   border-color: var(--bulma-dark);
+  box-shadow: none;
+}
+.bulma-button .bulma-button.is-text.bulma-is-text,
+.bulma-button .bulma-boton.es-text.bulma-is-text {
+  --bulma-button-h: var(--bulma-text-h);
+  --bulma-button-s: var(--bulma-text-s);
+  --bulma-button-l: var(--bulma-text-l);
+  --bulma-button-background-l: var(--bulma-text-l);
+  --bulma-button-border-l: var(--bulma-text-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-text-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-text.bulma-is-text:focus-visible, .bulma-button .bulma-button.is-text.bulma-is-text.bulma-is-focused,
+.bulma-button .bulma-boton.es-text.bulma-is-text:focus-visible,
+.bulma-button .bulma-boton.es-text.bulma-is-text.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-text.bulma-is-text.bulma-is-light,
+.bulma-button .bulma-boton.es-text.bulma-is-text.bulma-is-light {
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-color-l: var(--bulma-text-light-invert-l);
+}
+.bulma-button .bulma-button.is-text.bulma-is-text.bulma-is-dark,
+.bulma-button .bulma-boton.es-text.bulma-is-text.bulma-is-dark {
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-color-l: var(--bulma-text-dark-invert-l);
+}
+.bulma-button .bulma-button.is-text.bulma-is-text.bulma-is-soft,
+.bulma-button .bulma-boton.es-text.bulma-is-text.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-text.bulma-is-text.bulma-is-bold,
+.bulma-button .bulma-boton.es-text.bulma-is-text.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-text.bulma-is-text[disabled], fieldset[disabled] .bulma-button .bulma-button.is-text.bulma-is-text,
+.bulma-button .bulma-boton.es-text.bulma-is-text[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-text.bulma-is-text {
+  background-color: var(--bulma-text);
+  border-color: var(--bulma-text);
   box-shadow: none;
 }
 .bulma-button.bulma-is-text {
@@ -3570,6 +3745,49 @@ a.bulma-box:active {
   border-color: var(--bulma-text);
   box-shadow: none;
 }
+.bulma-button .bulma-button.is-primary.bulma-is-primary,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary {
+  --bulma-button-h: var(--bulma-primary-h);
+  --bulma-button-s: var(--bulma-primary-s);
+  --bulma-button-l: var(--bulma-primary-l);
+  --bulma-button-background-l: var(--bulma-primary-l);
+  --bulma-button-border-l: var(--bulma-primary-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-primary-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-primary.bulma-is-primary:focus-visible, .bulma-button .bulma-button.is-primary.bulma-is-primary.bulma-is-focused,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary:focus-visible,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-primary.bulma-is-primary.bulma-is-light,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary.bulma-is-light {
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-color-l: var(--bulma-primary-light-invert-l);
+}
+.bulma-button .bulma-button.is-primary.bulma-is-primary.bulma-is-dark,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary.bulma-is-dark {
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-color-l: var(--bulma-primary-dark-invert-l);
+}
+.bulma-button .bulma-button.is-primary.bulma-is-primary.bulma-is-soft,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-primary.bulma-is-primary.bulma-is-bold,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-primary.bulma-is-primary[disabled], fieldset[disabled] .bulma-button .bulma-button.is-primary.bulma-is-primary,
+.bulma-button .bulma-boton.es-primary.bulma-is-primary[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-primary.bulma-is-primary {
+  background-color: var(--bulma-primary);
+  border-color: var(--bulma-primary);
+  box-shadow: none;
+}
 .bulma-button.bulma-is-primary {
   --bulma-button-h: var(--bulma-primary-h);
   --bulma-button-s: var(--bulma-primary-s);
@@ -3602,6 +3820,49 @@ a.bulma-box:active {
 .bulma-button.bulma-is-primary[disabled], fieldset[disabled] .bulma-button.bulma-is-primary {
   background-color: var(--bulma-primary);
   border-color: var(--bulma-primary);
+  box-shadow: none;
+}
+.bulma-button .bulma-button.is-link.bulma-is-link,
+.bulma-button .bulma-boton.es-link.bulma-is-link {
+  --bulma-button-h: var(--bulma-link-h);
+  --bulma-button-s: var(--bulma-link-s);
+  --bulma-button-l: var(--bulma-link-l);
+  --bulma-button-background-l: var(--bulma-link-l);
+  --bulma-button-border-l: var(--bulma-link-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-link-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-link.bulma-is-link:focus-visible, .bulma-button .bulma-button.is-link.bulma-is-link.bulma-is-focused,
+.bulma-button .bulma-boton.es-link.bulma-is-link:focus-visible,
+.bulma-button .bulma-boton.es-link.bulma-is-link.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-link.bulma-is-link.bulma-is-light,
+.bulma-button .bulma-boton.es-link.bulma-is-link.bulma-is-light {
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-color-l: var(--bulma-link-light-invert-l);
+}
+.bulma-button .bulma-button.is-link.bulma-is-link.bulma-is-dark,
+.bulma-button .bulma-boton.es-link.bulma-is-link.bulma-is-dark {
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-color-l: var(--bulma-link-dark-invert-l);
+}
+.bulma-button .bulma-button.is-link.bulma-is-link.bulma-is-soft,
+.bulma-button .bulma-boton.es-link.bulma-is-link.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-link.bulma-is-link.bulma-is-bold,
+.bulma-button .bulma-boton.es-link.bulma-is-link.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-link.bulma-is-link[disabled], fieldset[disabled] .bulma-button .bulma-button.is-link.bulma-is-link,
+.bulma-button .bulma-boton.es-link.bulma-is-link[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-link.bulma-is-link {
+  background-color: var(--bulma-link);
+  border-color: var(--bulma-link);
   box-shadow: none;
 }
 .bulma-button.bulma-is-link {
@@ -3638,6 +3899,49 @@ a.bulma-box:active {
   border-color: var(--bulma-link);
   box-shadow: none;
 }
+.bulma-button .bulma-button.is-info.bulma-is-info,
+.bulma-button .bulma-boton.es-info.bulma-is-info {
+  --bulma-button-h: var(--bulma-info-h);
+  --bulma-button-s: var(--bulma-info-s);
+  --bulma-button-l: var(--bulma-info-l);
+  --bulma-button-background-l: var(--bulma-info-l);
+  --bulma-button-border-l: var(--bulma-info-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-info-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-info.bulma-is-info:focus-visible, .bulma-button .bulma-button.is-info.bulma-is-info.bulma-is-focused,
+.bulma-button .bulma-boton.es-info.bulma-is-info:focus-visible,
+.bulma-button .bulma-boton.es-info.bulma-is-info.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-info.bulma-is-info.bulma-is-light,
+.bulma-button .bulma-boton.es-info.bulma-is-info.bulma-is-light {
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-color-l: var(--bulma-info-light-invert-l);
+}
+.bulma-button .bulma-button.is-info.bulma-is-info.bulma-is-dark,
+.bulma-button .bulma-boton.es-info.bulma-is-info.bulma-is-dark {
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-color-l: var(--bulma-info-dark-invert-l);
+}
+.bulma-button .bulma-button.is-info.bulma-is-info.bulma-is-soft,
+.bulma-button .bulma-boton.es-info.bulma-is-info.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-info.bulma-is-info.bulma-is-bold,
+.bulma-button .bulma-boton.es-info.bulma-is-info.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-info.bulma-is-info[disabled], fieldset[disabled] .bulma-button .bulma-button.is-info.bulma-is-info,
+.bulma-button .bulma-boton.es-info.bulma-is-info[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-info.bulma-is-info {
+  background-color: var(--bulma-info);
+  border-color: var(--bulma-info);
+  box-shadow: none;
+}
 .bulma-button.bulma-is-info {
   --bulma-button-h: var(--bulma-info-h);
   --bulma-button-s: var(--bulma-info-s);
@@ -3670,6 +3974,49 @@ a.bulma-box:active {
 .bulma-button.bulma-is-info[disabled], fieldset[disabled] .bulma-button.bulma-is-info {
   background-color: var(--bulma-info);
   border-color: var(--bulma-info);
+  box-shadow: none;
+}
+.bulma-button .bulma-button.is-success.bulma-is-success,
+.bulma-button .bulma-boton.es-success.bulma-is-success {
+  --bulma-button-h: var(--bulma-success-h);
+  --bulma-button-s: var(--bulma-success-s);
+  --bulma-button-l: var(--bulma-success-l);
+  --bulma-button-background-l: var(--bulma-success-l);
+  --bulma-button-border-l: var(--bulma-success-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-success-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-success.bulma-is-success:focus-visible, .bulma-button .bulma-button.is-success.bulma-is-success.bulma-is-focused,
+.bulma-button .bulma-boton.es-success.bulma-is-success:focus-visible,
+.bulma-button .bulma-boton.es-success.bulma-is-success.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-success.bulma-is-success.bulma-is-light,
+.bulma-button .bulma-boton.es-success.bulma-is-success.bulma-is-light {
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-color-l: var(--bulma-success-light-invert-l);
+}
+.bulma-button .bulma-button.is-success.bulma-is-success.bulma-is-dark,
+.bulma-button .bulma-boton.es-success.bulma-is-success.bulma-is-dark {
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-color-l: var(--bulma-success-dark-invert-l);
+}
+.bulma-button .bulma-button.is-success.bulma-is-success.bulma-is-soft,
+.bulma-button .bulma-boton.es-success.bulma-is-success.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-success.bulma-is-success.bulma-is-bold,
+.bulma-button .bulma-boton.es-success.bulma-is-success.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-success.bulma-is-success[disabled], fieldset[disabled] .bulma-button .bulma-button.is-success.bulma-is-success,
+.bulma-button .bulma-boton.es-success.bulma-is-success[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-success.bulma-is-success {
+  background-color: var(--bulma-success);
+  border-color: var(--bulma-success);
   box-shadow: none;
 }
 .bulma-button.bulma-is-success {
@@ -3706,6 +4053,49 @@ a.bulma-box:active {
   border-color: var(--bulma-success);
   box-shadow: none;
 }
+.bulma-button .bulma-button.is-warning.bulma-is-warning,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning {
+  --bulma-button-h: var(--bulma-warning-h);
+  --bulma-button-s: var(--bulma-warning-s);
+  --bulma-button-l: var(--bulma-warning-l);
+  --bulma-button-background-l: var(--bulma-warning-l);
+  --bulma-button-border-l: var(--bulma-warning-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-warning-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-warning.bulma-is-warning:focus-visible, .bulma-button .bulma-button.is-warning.bulma-is-warning.bulma-is-focused,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning:focus-visible,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-warning.bulma-is-warning.bulma-is-light,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning.bulma-is-light {
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-color-l: var(--bulma-warning-light-invert-l);
+}
+.bulma-button .bulma-button.is-warning.bulma-is-warning.bulma-is-dark,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning.bulma-is-dark {
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-color-l: var(--bulma-warning-dark-invert-l);
+}
+.bulma-button .bulma-button.is-warning.bulma-is-warning.bulma-is-soft,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-warning.bulma-is-warning.bulma-is-bold,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-warning.bulma-is-warning[disabled], fieldset[disabled] .bulma-button .bulma-button.is-warning.bulma-is-warning,
+.bulma-button .bulma-boton.es-warning.bulma-is-warning[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-warning.bulma-is-warning {
+  background-color: var(--bulma-warning);
+  border-color: var(--bulma-warning);
+  box-shadow: none;
+}
 .bulma-button.bulma-is-warning {
   --bulma-button-h: var(--bulma-warning-h);
   --bulma-button-s: var(--bulma-warning-s);
@@ -3738,6 +4128,49 @@ a.bulma-box:active {
 .bulma-button.bulma-is-warning[disabled], fieldset[disabled] .bulma-button.bulma-is-warning {
   background-color: var(--bulma-warning);
   border-color: var(--bulma-warning);
+  box-shadow: none;
+}
+.bulma-button .bulma-button.is-danger.bulma-is-danger,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger {
+  --bulma-button-h: var(--bulma-danger-h);
+  --bulma-button-s: var(--bulma-danger-s);
+  --bulma-button-l: var(--bulma-danger-l);
+  --bulma-button-background-l: var(--bulma-danger-l);
+  --bulma-button-border-l: var(--bulma-danger-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-danger-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+.bulma-button .bulma-button.is-danger.bulma-is-danger:focus-visible, .bulma-button .bulma-button.is-danger.bulma-is-danger.bulma-is-focused,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger:focus-visible,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger.bulma-is-focused {
+  --bulma-button-border-width: 1px;
+}
+.bulma-button .bulma-button.is-danger.bulma-is-danger.bulma-is-light,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger.bulma-is-light {
+  --bulma-button-background-l: var(--bulma-light-l);
+  --bulma-button-color-l: var(--bulma-danger-light-invert-l);
+}
+.bulma-button .bulma-button.is-danger.bulma-is-danger.bulma-is-dark,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger.bulma-is-dark {
+  --bulma-button-background-l: var(--bulma-dark-l);
+  --bulma-button-color-l: var(--bulma-danger-dark-invert-l);
+}
+.bulma-button .bulma-button.is-danger.bulma-is-danger.bulma-is-soft,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger.bulma-is-soft {
+  --bulma-button-background-l: var(--bulma-soft-l);
+  --bulma-button-color-l: var(--bulma-soft-invert-l);
+}
+.bulma-button .bulma-button.is-danger.bulma-is-danger.bulma-is-bold,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger.bulma-is-bold {
+  --bulma-button-background-l: var(--bulma-bold-l);
+  --bulma-button-color-l: var(--bulma-bold-invert-l);
+}
+.bulma-button .bulma-button.is-danger.bulma-is-danger[disabled], fieldset[disabled] .bulma-button .bulma-button.is-danger.bulma-is-danger,
+.bulma-button .bulma-boton.es-danger.bulma-is-danger[disabled],
+fieldset[disabled] .bulma-button .bulma-boton.es-danger.bulma-is-danger {
+  background-color: var(--bulma-danger);
+  border-color: var(--bulma-danger);
   box-shadow: none;
 }
 .bulma-button.bulma-is-danger {
