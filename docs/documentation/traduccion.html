@@ -108,7 +108,7 @@ breadcrumb:
         <tr>
           <td><code>content</code></td>
           <td><code>contenido</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
+          <td class="has-text-success has-text-centered">✅</td>
         </tr>
         <tr>
           <td><code>delete</code></td>
@@ -837,6 +837,118 @@ breadcrumb:
 &lt;a href="#" class="caja"&gt;
   Enlace con clase caja
 &lt;/a&gt;</code></pre>
+    </div>
+  </div>
+
+  <!-- CONTENT/CONTENIDO -->
+  <h2 class="title is-3 mt-5">Contenido</h2>
+  <p>
+    El componente <code>content</code> es un contenedor que aplica estilos de texto predefinidos para elementos HTML comunes en bloques de texto.
+    A continuación se muestra una comparación entre contenido usando las clases originales en inglés (<code>content</code>) y sus alias en español (<code>contenido</code>), incluyendo los modificadores de tamaño.
+  </p>
+
+  <div class="columns">
+    <div class="column">
+      <h3 class="title is-5">Inglés</h3>
+      <div class="box">
+        <div class="content">
+          <h1>Encabezado h1</h1>
+          <p>Texto de párrafo con <strong>negrita</strong> y <em>cursiva</em>.</p>
+          <ul>
+            <li>Elemento de lista 1</li>
+            <li>Elemento de lista 2
+              <ul>
+                <li>Elemento anidado</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <h3 class="title is-5">Español</h3>
+      <div class="caja">
+        <div class="contenido">
+          <h1>Encabezado h1</h1>
+          <p>Texto de párrafo con <strong>negrita</strong> y <em>cursiva</em>.</p>
+          <ul>
+            <li>Elemento de lista 1</li>
+            <li>Elemento de lista 2
+              <ul>
+                <li>Elemento anidado</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modificadores de tamaño -->
+  <h3 class="title is-4 mt-4">Modificadores de tamaño</h3>
+  <div class="columns">
+    <div class="column">
+      <h5 class="title is-5">Inglés</h5>
+      <div class="content is-small">
+        <p>Contenido pequeño (<code>is-small</code>)</p>
+      </div>
+      <div class="content is-normal">
+        <p>Contenido normal (<code>is-normal</code>)</p>
+      </div>
+      <div class="content is-medium">
+        <p>Contenido mediano (<code>is-medium</code>)</p>
+      </div>
+      <div class="content is-large">
+        <p>Contenido grande (<code>is-large</code>)</p>
+      </div>
+    </div>
+    <div class="column">
+      <h5 class="title is-5">Español</h5>
+      <div class="contenido es-pequeno">
+        <p>Contenido pequeño (<code>es-pequeno</code>)</p>
+      </div>
+      <div class="contenido es-normal">
+        <p>Contenido normal (<code>es-normal</code>)</p>
+      </div>
+      <div class="contenido es-mediano">
+        <p>Contenido mediano (<code>es-mediano</code>)</p>
+      </div>
+      <div class="contenido es-grande">
+        <p>Contenido grande (<code>es-grande</code>)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Código HTML -->
+  <h3 class="title is-4 mt-4">Ejemplo de Código</h3>
+  <div class="columns">
+    <div class="column">
+      <h5 class="title is-5">Inglés</h5>
+      <pre><code class="language-html">&lt;div class="content"&gt;
+  &lt;h1&gt;Encabezado h1&lt;/h1&gt;
+  &lt;p&gt;Párrafo con &lt;strong&gt;negrita&lt;/strong&gt;.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Elemento de lista&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="content is-medium"&gt;
+  Contenido de tamaño medio
+&lt;/div&gt;</code></pre>
+    </div>
+    <div class="column">
+      <h5 class="title is-5">Español</h5>
+      <pre><code class="language-html">&lt;div class="contenido"&gt;
+  &lt;h1&gt;Encabezado h1&lt;/h1&gt;
+  &lt;p&gt;Párrafo con &lt;strong&gt;negrita&lt;/strong&gt;.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Elemento de lista&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="contenido es-mediano"&gt;
+  Contenido de tamaño medio
+&lt;/div&gt;</code></pre>
     </div>
   </div>
 

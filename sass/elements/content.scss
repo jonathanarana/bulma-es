@@ -287,3 +287,25 @@ $content-table-foot-cell-color: #{cv.getVar("text-strong")} !default;
     font-size: cv.getVar("size-large");
   }
 }
+
+// Alias en español para content
+.#{iv.$class-prefix}contenido {
+  @extend .#{iv.$class-prefix}content;
+  
+  // Traducciones para los modificadores de tamaño
+  &.#{iv.$class-prefix}es-pequeno {
+    @extend .#{iv.$class-prefix}is-small;
+  }
+  
+  &.#{iv.$class-prefix}es-normal {
+    @extend .#{iv.$class-prefix}is-normal;
+  }
+  
+  &.#{iv.$class-prefix}es-mediano {
+    @extend .#{iv.$class-prefix}is-medium;
+  }
+  
+  &.#{iv.$class-prefix}es-grande {
+    @extend .#{iv.$class-prefix}is-large;
+  }
+}
