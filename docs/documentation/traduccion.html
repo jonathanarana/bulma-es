@@ -32,6 +32,22 @@ breadcrumb:
         </tr>
       </thead>
       <tbody>
+        <!-- Helpers -->
+        <tr class="has-background-light">
+          <th colspan="4">Helpers</th>
+        </tr>
+        <tr>
+          <td rowspan="2">Color</td>
+          <td><code>has-text-*</code></td>
+          <td><code>tiene-texto-*</code></td>
+          <td class="has-text-success has-text-centered">✅</td>
+        </tr>
+        <tr>
+          <td><code>has-background-*</code></td>
+          <td><code>tiene-fondo-*</code></td>
+          <td class="has-text-success has-text-centered">✅</td>
+        </tr>
+
         <!-- Layout y Grid -->
         <tr class="has-background-light">
           <th colspan="4">Layout y Grid</th>
@@ -948,6 +964,121 @@ breadcrumb:
 
 &lt;div class="contenido es-mediano"&gt;
   Contenido de tamaño medio
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <!-- HELPERS DE COLOR -->
+  <h2 class="title is-3 mt-5">Helpers de Color</h2>
+  <p>
+    Los helpers de color son clases de utilidad que permiten aplicar rápidamente colores a textos y fondos. Se han implementado
+    traducciones para todas las variantes existentes, incluyendo las modificaciones de tono (claro, oscuro), intensidad (suave, fuerte)
+    y todas las variaciones numéricas (00-100).
+  </p>
+
+  <!-- Tabla de Traducciones -->
+  <h3 class="title is-4">Equivalencias</h3>
+  <div class="table-container">
+    <table class="table is-bordered is-striped is-hoverable">
+      <thead>
+        <tr>
+          <th>Inglés</th>
+          <th>Español</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>has-text-primary</code></td>
+          <td><code>tiene-texto-primario</code></td>
+        </tr>
+        <tr>
+          <td><code>has-background-primary</code></td>
+          <td><code>tiene-fondo-primario</code></td>
+        </tr>
+        <tr>
+          <td><code>has-text-primary-light</code></td>
+          <td><code>tiene-texto-primario-claro</code></td>
+        </tr>
+        <tr>
+          <td><code>has-background-primary-dark</code></td>
+          <td><code>tiene-fondo-primario-oscuro</code></td>
+        </tr>
+        <tr>
+          <td><code>has-text-danger-invert</code></td>
+          <td><code>tiene-texto-peligro-invertido</code></td>
+        </tr>
+        <tr>
+          <td><code>has-text-grey-dark</code></td>
+          <td><code>tiene-texto-gris-oscuro</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Ejemplos de Uso -->
+  <h3 class="title is-4 mt-4">Ejemplos en Acción</h3>
+  <div class="columns">
+    <div class="column">
+      <h5 class="title is-5">Inglés</h5>
+      <p class="has-text-primary">Texto en color primario</p>
+      <p class="has-text-success">Texto en color éxito</p>
+      <p class="has-text-warning">Texto en color advertencia</p>
+      <p class="has-text-danger">Texto en color peligro</p>
+      <div class="has-background-info p-2 mb-2">
+        <p class="has-text-white">Fondo info, texto blanco</p>
+      </div>
+      <div class="has-background-success-light p-2">
+        <p class="has-text-success-dark">Fondo éxito claro, texto éxito oscuro</p>
+      </div>
+    </div>
+    <div class="column">
+      <h5 class="title is-5">Español</h5>
+      <p class="tiene-texto-primario">Texto en color primario</p>
+      <p class="tiene-texto-exito">Texto en color éxito</p>
+      <p class="tiene-texto-advertencia">Texto en color advertencia</p>
+      <p class="tiene-texto-peligro">Texto en color peligro</p>
+      <div class="tiene-fondo-info p-2 mb-2">
+        <p class="tiene-texto-blanco">Fondo info, texto blanco</p>
+      </div>
+      <div class="tiene-fondo-exito-claro p-2">
+        <p class="tiene-texto-exito-oscuro">Fondo éxito claro, texto éxito oscuro</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Código HTML -->
+  <h3 class="title is-4 mt-4">Ejemplo de Código</h3>
+  <div class="columns">
+    <div class="column">
+      <h5 class="title is-5">Inglés</h5>
+      <pre><code class="language-html">&lt;p class="has-text-primary"&gt;Texto en color primario&lt;/p&gt;
+
+&lt;div class="has-background-info"&gt;
+  &lt;p class="has-text-white"&gt;
+    Fondo info, texto blanco
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="has-background-success-light"&gt;
+  &lt;p class="has-text-success-dark"&gt;
+    Fondo éxito claro, texto éxito oscuro
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <div class="column">
+      <h5 class="title is-5">Español</h5>
+      <pre><code class="language-html">&lt;p class="tiene-texto-primario"&gt;Texto en color primario&lt;/p&gt;
+
+&lt;div class="tiene-fondo-info"&gt;
+  &lt;p class="tiene-texto-blanco"&gt;
+    Fondo info, texto blanco
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="tiene-fondo-exito-claro"&gt;
+  &lt;p class="tiene-texto-exito-oscuro"&gt;
+    Fondo éxito claro, texto éxito oscuro
+  &lt;/p&gt;
 &lt;/div&gt;</code></pre>
     </div>
   </div>

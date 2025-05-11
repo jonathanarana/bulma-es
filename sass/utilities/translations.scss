@@ -1,0 +1,86 @@
+// Archivo centralizado de traducciones para Bulma-ES
+// Este archivo contiene los mapas de traducción que son utilizados por varios 
+// componentes para mantener consistencia en toda la localización.
+
+@use "sass:map";
+
+// Mapa de traducciones para colores (inglés -> español)
+$color-translations: (
+  "primary": "primario",
+  "secondary": "secundario",
+  "link": "enlace",
+  "info": "info",
+  "success": "exito",
+  "warning": "advertencia",
+  "danger": "peligro",
+  "white": "blanco",
+  "black": "negro",
+  "light": "claro",
+  "dark": "oscuro",
+  "ghost": "fantasma",
+  "text": "texto"
+);
+
+// Mapa de traducciones para tonos de grises (inglés -> español)
+$shade-translations: (
+  "white": "blanco",
+  "white-bis": "casi-blanco",
+  "white-ter": "blanquecino",
+  "grey-lighter": "gris-muy-claro",
+  "grey-light": "gris-claro",
+  "grey": "gris",
+  "grey-dark": "gris-oscuro",
+  "grey-darker": "gris-muy-oscuro",
+  "black-ter": "negruzco",
+  "black-bis": "casi-negro",
+  "black": "negro"
+);
+
+// Mapa de traducciones para tamaños (inglés -> español)
+$size-translations: (
+  "small": "pequeno",
+  "normal": "normal",
+  "medium": "mediano",
+  "large": "grande"
+);
+
+// Mapa de traducciones para modificadores responsive (inglés -> español)
+$responsive-translations: (
+  "mobile": "celular",
+  "tablet": "tableta",
+  "desktop": "escritorio",
+  "widescreen": "ancha",
+  "fullhd": "fullhd"  // Se mantiene igual
+);
+
+// Función de utilidad para obtener la traducción de un color
+@function translate-color($name) {
+  @if map.has-key($color-translations, $name) {
+    @return map.get($color-translations, $name);
+  }
+  @return $name; // Si no hay traducción, devolver el nombre original
+}
+
+// Función de utilidad para obtener la traducción de un tono
+@function translate-shade($name) {
+  @if map.has-key($shade-translations, $name) {
+    @return map.get($shade-translations, $name);
+  }
+  @return $name; // Si no hay traducción, devolver el nombre original
+}
+
+// Función de utilidad para obtener la traducción de un tamaño
+@function translate-size($name) {
+  @if map.has-key($size-translations, $name) {
+    @return map.get($size-translations, $name);
+  }
+  @return $name; // Si no hay traducción, devolver el nombre original
+}
+
+// Función de utilidad para obtener la traducción de un modificador responsive
+@function translate-responsive($name) {
+  @if map.has-key($responsive-translations, $name) {
+    @return map.get($responsive-translations, $name);
+  }
+  @return $name; // Si no hay traducción, devolver el nombre original
+}

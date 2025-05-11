@@ -1,6 +1,7 @@
 @use "../utilities/css-variables" as cv;
 @use "../utilities/derived-variables" as dv;
 @use "../utilities/initial-variables" as iv;
+@use "../utilities/translations" as trans;
 
 $digits: (
   "00",
@@ -341,4 +342,217 @@ $digits: (
 
 .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-inherit {
   background-color: inherit !important;
+}
+
+// Traducciones de helpers de color al español
+// ------------------------------------------------
+
+// Background básico
+.#{iv.$class-prefix}tiene-fondo {
+  @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background;
+}
+
+// Helpers para colores principales
+@each $name, $color in dv.$colors {
+  // Obtener la traducción española del nombre del color usando la función centralizada
+  $spanish-name: trans.translate-color($name);
+
+  // Helpers de texto
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name} {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name};
+  }
+
+  // Helpers de fondo
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name} {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name};
+  }
+
+  // Invert
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-invert;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-invert;
+  }
+
+  // On Scheme
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-en-esquema {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-on-scheme;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-en-esquema {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-on-scheme;
+  }
+
+  // Light
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-claro {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-light;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-claro {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-light;
+  }
+
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-claro-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-light-invert;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-claro-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-light-invert;
+  }
+
+  // Dark
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-oscuro {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-dark;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-oscuro {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-dark;
+  }
+
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-oscuro-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-dark-invert;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-oscuro-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-dark-invert;
+  }
+
+  // Soft/Bold
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-suave {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-soft;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-suave {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-soft;
+  }
+
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-fuerte {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-bold;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-fuerte {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-bold;
+  }
+
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-suave-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-soft-invert;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-suave-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-soft-invert;
+  }
+
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-fuerte-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-bold-invert;
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-fuerte-invertido {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-bold-invert;
+  }
+
+  // Todas las variaciones numéricas (00-100)
+  @each $digit in $digits {
+    .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-#{$digit} {
+      @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-#{$digit};
+    }
+
+    .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-#{$digit} {
+      @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-#{$digit};
+    }
+
+    .#{iv.$class-prefix}tiene-texto-#{$spanish-name}-#{$digit}-invertido {
+      @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name}-#{$digit}-invert;
+    }
+
+    .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}-#{$digit}-invertido {
+      @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name}-#{$digit}-invert;
+    }
+  }
+
+  // Hover - No usamos @extend para evitar problemas con selectores compuestos
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name}.es-flotante {
+    &:hover,
+    &:focus-visible {
+      color: hsl(
+        #{cv.getVar($name, "", "-h")},
+        #{cv.getVar($name, "", "-s")},
+        calc(
+          #{cv.getVar($name, "", "-l")} + #{cv.getVar("hover-color-l-delta")}
+        )
+      ) !important;
+    }
+
+    &:active {
+      color: hsl(
+        #{cv.getVar($name, "", "-h")},
+        #{cv.getVar($name, "", "-s")},
+        calc(
+          #{cv.getVar($name, "", "-l")} + #{cv.getVar("active-color-l-delta")}
+        )
+      ) !important;
+    }
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name}.es-flotante {
+    &:hover,
+    &:focus-visible {
+      background-color: hsl(
+        #{cv.getVar($name, "", "-h")},
+        #{cv.getVar($name, "", "-s")},
+        calc(
+          #{cv.getVar($name, "", "-l")} +
+            #{cv.getVar("hover-background-l-delta")}
+        )
+      ) !important;
+    }
+
+    &:active {
+      background-color: hsl(
+        #{cv.getVar($name, "", "-h")},
+        #{cv.getVar($name, "", "-s")},
+        calc(
+          #{cv.getVar($name, "", "-l")} +
+            #{cv.getVar("active-background-l-delta")}
+        )
+      ) !important;
+    }
+  }
+
+  // Palettes
+  .#{iv.$class-prefix}paleta-#{$spanish-name} {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-prefix}palette-#{$name};
+  }
+}
+
+// Tonos (blanco, negro, gris, etc.)
+@each $name, $shade in dv.$shades {
+  // Obtener la traducción usando la función centralizada
+  $spanish-name: trans.translate-shade($name);
+
+  .#{iv.$class-prefix}tiene-texto-#{$spanish-name} {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-#{$name};
+  }
+
+  .#{iv.$class-prefix}tiene-fondo-#{$spanish-name} {
+    @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-#{$name};
+  }
+}
+
+// Valores especiales
+.#{iv.$class-prefix}tiene-texto-actual {
+  @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-current;
+}
+
+.#{iv.$class-prefix}tiene-texto-heredado {
+  @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}text-inherit;
+}
+
+.#{iv.$class-prefix}tiene-fondo-actual {
+  @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-current;
+}
+
+.#{iv.$class-prefix}tiene-fondo-heredado {
+  @extend .#{iv.$class-prefix}#{iv.$helpers-has-prefix}background-inherit;
 }

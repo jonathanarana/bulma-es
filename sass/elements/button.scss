@@ -5,6 +5,7 @@
 @use "../utilities/initial-variables" as iv;
 @use "../utilities/extends";
 @use "../utilities/mixins" as mx;
+@use "../utilities/translations" as trans;
 
 $button-h: #{cv.getVar("scheme-h")};
 $button-s: #{cv.getVar("scheme-s")};
@@ -126,27 +127,12 @@ $no-palette: ("white", "black", "light", "dark");
 .#{iv.$class-prefix}boton {
   @extend .#{iv.$class-prefix}button;
 
-  // Alias para modificadores de botón
-  &.es-primario {
-    @extend .#{iv.$class-prefix}is-primary;
-  }
-  &.es-enlace {
-    @extend .#{iv.$class-prefix}is-link;
-  }
-  &.es-info {
-    @extend .#{iv.$class-prefix}is-info;
-  }
-  &.es-exito {
-    @extend .#{iv.$class-prefix}is-success;
-  }
-  &.es-advertencia {
-    @extend .#{iv.$class-prefix}is-warning;
-  }
-  &.es-peligro {
-    @extend .#{iv.$class-prefix}is-danger;
-  }
-  &.es-claro {
-    @extend .#{iv.$class-prefix}is-light;
+  // Alias para modificadores de botón (usando sistema centralizado de traducciones)
+  @each $name, $color in dv.$colors {
+    $spanish-name: trans.translate-color($name);
+    &.es-#{$spanish-name} {
+      @extend .#{iv.$class-prefix}is-#{$name};
+    }
   }
   &.es-oscuro {
     @extend .#{iv.$class-prefix}is-dark;
@@ -159,18 +145,16 @@ $no-palette: ("white", "black", "light", "dark");
   }
 
   // Alias para otros modificadores comunes
-  &.es-pequeno {
-    @extend .#{iv.$class-prefix}is-small;
+  // Alias para tamaños (usando sistema centralizado de traducciones)
+  $button-sizes: ("small", "normal", "medium", "large");
+  @each $size in $button-sizes {
+    $spanish-size: trans.translate-size($size);
+    &.es-#{$spanish-size} {
+      @extend .#{iv.$class-prefix}is-#{$size};
+    }
   }
-  &.es-normal {
-    @extend .#{iv.$class-prefix}is-normal;
-  }
-  &.es-mediano {
-    @extend .#{iv.$class-prefix}is-medium;
-  }
-  &.es-grande {
-    @extend .#{iv.$class-prefix}is-large;
-  }
+  
+  // Otros modificadores comunes
   &.es-texto {
     @extend .#{iv.$class-prefix}is-text;
   }
@@ -192,14 +176,11 @@ $no-palette: ("white", "black", "light", "dark");
   &.es-estatico {
     @extend .#{iv.$class-prefix}is-static;
   }
-  &.es-enfocado {
+  &.es-enfocado, &.es-foco {
     @extend .#{iv.$class-prefix}is-focused;
   }
   &.es-activo {
     @extend .#{iv.$class-prefix}is-active;
-  }
-  &.es-foco {
-    @extend .#{iv.$class-prefix}is-focused;
   }
   &.es-suave {
     @extend .#{iv.$class-prefix}is-soft;
@@ -250,14 +231,13 @@ $no-palette: ("white", "black", "light", "dark");
 .#{iv.$class-prefix}botones {
   @extend .#{iv.$class-prefix}buttons;
 
-  &.son-pequenos {
-    @extend .#{iv.$class-prefix}are-small;
-  }
-  &.son-medianos {
-    @extend .#{iv.$class-prefix}are-medium;
-  }
-  &.son-grandes {
-    @extend .#{iv.$class-prefix}are-large;
+  // Usar sistema centralizado de traducciones para tamaños
+  $button-sizes: ("small", "medium", "large");
+  @each $size in $button-sizes {
+    $spanish-size: trans.translate-size($size);
+    &.son-#{$spanish-size}s {
+      @extend .#{iv.$class-prefix}are-#{$size};
+    }
   }
 }
 
