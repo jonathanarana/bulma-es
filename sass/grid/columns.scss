@@ -959,3 +959,358 @@ $column-gap: 0.75rem !default;
     }
   }
 }
+
+// Traducciones al español para el sistema de columnas
+
+// Alias base para columnas y columna
+.#{iv.$class-prefix}columnas {
+  @extend .#{iv.$class-prefix}columns;
+}
+
+.#{iv.$class-prefix}columna {
+  @extend .#{iv.$class-prefix}column;
+}
+
+// Modificadores para .columnas
+.#{iv.$class-prefix}columnas {
+  &.#{iv.$class-prefix}es-centrada {
+    @extend .#{iv.$class-prefix}is-centered;
+  }
+
+  &.#{iv.$class-prefix}es-celular {
+    @extend .#{iv.$class-prefix}is-mobile;
+  }
+
+  &.#{iv.$class-prefix}es-multilinea {
+    @extend .#{iv.$class-prefix}is-multiline;
+  }
+
+  &.#{iv.$class-prefix}es-centrado-vertical {
+    @extend .#{iv.$class-prefix}is-vcentered;
+  }
+
+  &.#{iv.$class-prefix}es-sin-espacios {
+    @extend .#{iv.$class-prefix}is-gapless;
+  }
+
+  &.#{iv.$class-prefix}es-escritorio {
+    @extend .#{iv.$class-prefix}is-desktop;
+  }
+
+  // Espaciado de columnas
+  @for $i from 0 through 8 {
+    &.#{iv.$class-prefix}es-#{$i} {
+      @extend .#{iv.$class-prefix}is-#{$i};
+    }
+
+    // Con breakpoints
+    &.#{iv.$class-prefix}es-#{$i}-celular {
+      @extend .#{iv.$class-prefix}is-#{$i}-mobile;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-tableta {
+      @extend .#{iv.$class-prefix}is-#{$i}-tablet;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-solo-tableta {
+      @extend .#{iv.$class-prefix}is-#{$i}-tablet-only;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-tactil {
+      @extend .#{iv.$class-prefix}is-#{$i}-touch;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-escritorio {
+      @extend .#{iv.$class-prefix}is-#{$i}-desktop;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-solo-escritorio {
+      @extend .#{iv.$class-prefix}is-#{$i}-desktop-only;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-ancha {
+      @extend .#{iv.$class-prefix}is-#{$i}-widescreen;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-solo-ancha {
+      @extend .#{iv.$class-prefix}is-#{$i}-widescreen-only;
+    }
+
+    &.#{iv.$class-prefix}es-#{$i}-fullhd {
+      @extend .#{iv.$class-prefix}is-#{$i}-fullhd;
+    }
+  }
+}
+
+// Modificadores para .columna
+.#{iv.$class-prefix}columna {
+  // Ancho estrecho
+  &.#{iv.$class-prefix}es-estrecha {
+    @extend .#{iv.$class-prefix}is-narrow;
+  }
+
+  &.#{iv.$class-prefix}es-estrecha-celular {
+    @extend .#{iv.$class-prefix}is-narrow-mobile;
+  }
+
+  &.#{iv.$class-prefix}es-estrecha-tableta {
+    @extend .#{iv.$class-prefix}is-narrow-tablet;
+  }
+
+  &.#{iv.$class-prefix}es-estrecha-tactil {
+    @extend .#{iv.$class-prefix}is-narrow-touch;
+  }
+
+  &.#{iv.$class-prefix}es-estrecha-escritorio {
+    @extend .#{iv.$class-prefix}is-narrow-desktop;
+  }
+
+  &.#{iv.$class-prefix}es-estrecha-ancha {
+    @extend .#{iv.$class-prefix}is-narrow-widescreen;
+  }
+
+  &.#{iv.$class-prefix}es-estrecha-fullhd {
+    @extend .#{iv.$class-prefix}is-narrow-fullhd;
+  }
+
+  // Tamaños específicos
+  &.#{iv.$class-prefix}es-completa {
+    @extend .#{iv.$class-prefix}is-full;
+  }
+  
+  &.#{iv.$class-prefix}es-tres-cuartos {
+    @extend .#{iv.$class-prefix}is-three-quarters;
+  }
+  
+  &.#{iv.$class-prefix}es-dos-tercios {
+    @extend .#{iv.$class-prefix}is-two-thirds;
+  }
+  
+  &.#{iv.$class-prefix}es-mitad {
+    @extend .#{iv.$class-prefix}is-half;
+  }
+  
+  &.#{iv.$class-prefix}es-un-tercio {
+    @extend .#{iv.$class-prefix}is-one-third;
+  }
+  
+  &.#{iv.$class-prefix}es-un-cuarto {
+    @extend .#{iv.$class-prefix}is-one-quarter;
+  }
+  
+  &.#{iv.$class-prefix}es-un-quinto {
+    @extend .#{iv.$class-prefix}is-one-fifth;
+  }
+  
+  &.#{iv.$class-prefix}es-dos-quintos {
+    @extend .#{iv.$class-prefix}is-two-fifths;
+  }
+  
+  &.#{iv.$class-prefix}es-tres-quintos {
+    @extend .#{iv.$class-prefix}is-three-fifths;
+  }
+  
+  &.#{iv.$class-prefix}es-cuatro-quintos {
+    @extend .#{iv.$class-prefix}is-four-fifths;
+  }
+
+  // Tamaños específicos + breakpoints
+  &.#{iv.$class-prefix}es-completa-celular {
+    @extend .#{iv.$class-prefix}is-full-mobile;
+  }
+  
+  &.#{iv.$class-prefix}es-tres-cuartos-celular {
+    @extend .#{iv.$class-prefix}is-three-quarters-mobile;
+  }
+  
+  &.#{iv.$class-prefix}es-dos-tercios-celular {
+    @extend .#{iv.$class-prefix}is-two-thirds-mobile;
+  }
+  
+  &.#{iv.$class-prefix}es-mitad-celular {
+    @extend .#{iv.$class-prefix}is-half-mobile;
+  }
+  
+  &.#{iv.$class-prefix}es-un-tercio-celular {
+    @extend .#{iv.$class-prefix}is-one-third-mobile;
+  }
+  
+  &.#{iv.$class-prefix}es-un-cuarto-celular {
+    @extend .#{iv.$class-prefix}is-one-quarter-mobile;
+  }
+
+  // Tableta
+  &.#{iv.$class-prefix}es-completa-tableta {
+    @extend .#{iv.$class-prefix}is-full-tablet;
+  }
+  
+  &.#{iv.$class-prefix}es-tres-cuartos-tableta {
+    @extend .#{iv.$class-prefix}is-three-quarters-tablet;
+  }
+  
+  &.#{iv.$class-prefix}es-dos-tercios-tableta {
+    @extend .#{iv.$class-prefix}is-two-thirds-tablet;
+  }
+  
+  &.#{iv.$class-prefix}es-mitad-tableta {
+    @extend .#{iv.$class-prefix}is-half-tablet;
+  }
+  
+  &.#{iv.$class-prefix}es-un-tercio-tableta {
+    @extend .#{iv.$class-prefix}is-one-third-tablet;
+  }
+  
+  &.#{iv.$class-prefix}es-un-cuarto-tableta {
+    @extend .#{iv.$class-prefix}is-one-quarter-tablet;
+  }
+
+  // Escritorio
+  &.#{iv.$class-prefix}es-completa-escritorio {
+    @extend .#{iv.$class-prefix}is-full-desktop;
+  }
+  
+  &.#{iv.$class-prefix}es-tres-cuartos-escritorio {
+    @extend .#{iv.$class-prefix}is-three-quarters-desktop;
+  }
+  
+  &.#{iv.$class-prefix}es-dos-tercios-escritorio {
+    @extend .#{iv.$class-prefix}is-two-thirds-desktop;
+  }
+  
+  &.#{iv.$class-prefix}es-mitad-escritorio {
+    @extend .#{iv.$class-prefix}is-half-desktop;
+  }
+  
+  &.#{iv.$class-prefix}es-un-tercio-escritorio {
+    @extend .#{iv.$class-prefix}is-one-third-desktop;
+  }
+  
+  &.#{iv.$class-prefix}es-un-cuarto-escritorio {
+    @extend .#{iv.$class-prefix}is-one-quarter-desktop;
+  }
+
+  // Ancha
+  &.#{iv.$class-prefix}es-completa-ancha {
+    @extend .#{iv.$class-prefix}is-full-widescreen;
+  }
+  
+  &.#{iv.$class-prefix}es-tres-cuartos-ancha {
+    @extend .#{iv.$class-prefix}is-three-quarters-widescreen;
+  }
+  
+  &.#{iv.$class-prefix}es-dos-tercios-ancha {
+    @extend .#{iv.$class-prefix}is-two-thirds-widescreen;
+  }
+  
+  &.#{iv.$class-prefix}es-mitad-ancha {
+    @extend .#{iv.$class-prefix}is-half-widescreen;
+  }
+  
+  &.#{iv.$class-prefix}es-un-tercio-ancha {
+    @extend .#{iv.$class-prefix}is-one-third-widescreen;
+  }
+  
+  &.#{iv.$class-prefix}es-un-cuarto-ancha {
+    @extend .#{iv.$class-prefix}is-one-quarter-widescreen;
+  }
+
+  // FullHD
+  &.#{iv.$class-prefix}es-completa-fullhd {
+    @extend .#{iv.$class-prefix}is-full-fullhd;
+  }
+  
+  &.#{iv.$class-prefix}es-tres-cuartos-fullhd {
+    @extend .#{iv.$class-prefix}is-three-quarters-fullhd;
+  }
+  
+  &.#{iv.$class-prefix}es-dos-tercios-fullhd {
+    @extend .#{iv.$class-prefix}is-two-thirds-fullhd;
+  }
+  
+  &.#{iv.$class-prefix}es-mitad-fullhd {
+    @extend .#{iv.$class-prefix}is-half-fullhd;
+  }
+  
+  &.#{iv.$class-prefix}es-un-tercio-fullhd {
+    @extend .#{iv.$class-prefix}is-one-third-fullhd;
+  }
+  
+  &.#{iv.$class-prefix}es-un-cuarto-fullhd {
+    @extend .#{iv.$class-prefix}is-one-quarter-fullhd;
+  }
+
+  // Desplazamientos (offsets)
+  &.#{iv.$class-prefix}es-desplazado-tres-cuartos {
+    @extend .#{iv.$class-prefix}is-offset-three-quarters;
+  }
+  
+  &.#{iv.$class-prefix}es-desplazado-dos-tercios {
+    @extend .#{iv.$class-prefix}is-offset-two-thirds;
+  }
+  
+  &.#{iv.$class-prefix}es-desplazado-mitad {
+    @extend .#{iv.$class-prefix}is-offset-half;
+  }
+  
+  &.#{iv.$class-prefix}es-desplazado-un-tercio {
+    @extend .#{iv.$class-prefix}is-offset-one-third;
+  }
+  
+  &.#{iv.$class-prefix}es-desplazado-un-cuarto {
+    @extend .#{iv.$class-prefix}is-offset-one-quarter;
+  }
+
+  // Tamaños numéricos
+  @for $i from 1 through 12 {
+    &.#{iv.$class-prefix}es-#{$i} {
+      @extend .#{iv.$class-prefix}is-#{$i};
+    }
+    
+    // Offsets numéricos
+    &.#{iv.$class-prefix}es-desplazado-#{$i} {
+      @extend .#{iv.$class-prefix}is-offset-#{$i};
+    }
+    
+    // Con breakpoints
+    &.#{iv.$class-prefix}es-#{$i}-celular {
+      @extend .#{iv.$class-prefix}is-#{$i}-mobile;
+    }
+    
+    &.#{iv.$class-prefix}es-#{$i}-tableta {
+      @extend .#{iv.$class-prefix}is-#{$i}-tablet;
+    }
+    
+    &.#{iv.$class-prefix}es-#{$i}-escritorio {
+      @extend .#{iv.$class-prefix}is-#{$i}-desktop;
+    }
+    
+    &.#{iv.$class-prefix}es-#{$i}-ancha {
+      @extend .#{iv.$class-prefix}is-#{$i}-widescreen;
+    }
+    
+    &.#{iv.$class-prefix}es-#{$i}-fullhd {
+      @extend .#{iv.$class-prefix}is-#{$i}-fullhd;
+    }
+    
+    // Desplazamientos con breakpoints
+    &.#{iv.$class-prefix}es-desplazado-#{$i}-celular {
+      @extend .#{iv.$class-prefix}is-offset-#{$i}-mobile;
+    }
+    
+    &.#{iv.$class-prefix}es-desplazado-#{$i}-tableta {
+      @extend .#{iv.$class-prefix}is-offset-#{$i}-tablet;
+    }
+    
+    &.#{iv.$class-prefix}es-desplazado-#{$i}-escritorio {
+      @extend .#{iv.$class-prefix}is-offset-#{$i}-desktop;
+    }
+    
+    &.#{iv.$class-prefix}es-desplazado-#{$i}-ancha {
+      @extend .#{iv.$class-prefix}is-offset-#{$i}-widescreen;
+    }
+    
+    &.#{iv.$class-prefix}es-desplazado-#{$i}-fullhd {
+      @extend .#{iv.$class-prefix}is-offset-#{$i}-fullhd;
+    }
+  }
+}
