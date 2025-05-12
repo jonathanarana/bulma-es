@@ -13,7 +13,27 @@ breadcrumb:
 
 <div class="content">
   <h1>Traducción de Clases de Bulma al Español</h1>
-  
+
+  <div class="notification is-info is-light">
+    <h3 class="title is-5"><i class="fas fa-info-circle"></i> ¡Nuevo! Sistema Centralizado de Traducciones</h3>
+    <p>
+      Hemos implementado un <strong>sistema centralizado de traducciones</strong> en
+      <code>sass/utilities/translations.scss</code>
+      que permite mantener todas las traducciones en un solo lugar y garantiza consistencia en todo el framework.
+      Este sistema incluye:
+    </p>
+    <ul>
+      <li>Mapas de traducción para colores, tonos, tamaños y más</li>
+      <li>Funciones de utilidad para obtener traducciones</li>
+      <li>Compatibilidad con Sass moderno</li>
+    </ul>
+    <p>
+      Todos los nuevos componentes deben usar este sistema en lugar de codificar traducciones directamente.
+      Consulta <a href="#sistema-centralizado">Sistema Centralizado</a> para más detalles o revisa el archivo
+      <code>instrucciones.md</code>.
+    </p>
+  </div>
+
   <h2 class="title is-4">Estado del Proyecto</h2>
   <p>
     A continuación se muestra el avance de la traducción de los distintos componentes de Bulma al español.
@@ -21,271 +41,311 @@ breadcrumb:
     mientras que los marcados con <span class="has-text-danger">❌</span> están pendientes de traducción.
   </p>
 
-  <div class="table-container">
-    <table class="table is-bordered is-striped is-hoverable">
-      <thead>
-        <tr>
-          <th>Categoría</th>
-          <th>Componente (Inglés)</th>
-          <th>Traducción (Español)</th>
-          <th>Estado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Helpers -->
-        <tr class="has-background-light">
-          <th colspan="4">Helpers</th>
-        </tr>
-        <tr>
-          <td rowspan="2">Color</td>
-          <td><code>has-text-*</code></td>
-          <td><code>tiene-texto-*</code></td>
-          <td class="has-text-success has-text-centered">✅</td>
-        </tr>
-        <tr>
-          <td><code>has-background-*</code></td>
-          <td><code>tiene-fondo-*</code></td>
-          <td class="has-text-success has-text-centered">✅</td>
-        </tr>
+  <div class="columns is-multiline">
+    <!-- COLUMNA 1: HELPERS Y LAYOUT/GRID -->
+    <div class="column">
+      <!-- Helpers -->
+      <h4 class="title is-5">Helpers</h4>
+      <table class="table is-bordered is-striped is-hoverable is-narrow is-fullwidth">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Traducción</th>
+            <th>Est.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>has-text-*</code></td>
+            <td><code>tiene-texto-*</code></td>
+            <td class="has-text-success has-text-centered">✅</td>
+          </tr>
+          <tr>
+            <td><code>has-background-*</code></td>
+            <td><code>tiene-fondo-*</code></td>
+            <td class="has-text-success has-text-centered">✅</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <!-- Layout y Grid -->
-        <tr class="has-background-light">
-          <th colspan="4">Layout y Grid</th>
-        </tr>
-        <tr>
-          <td rowspan="2">Grid</td>
-          <td><code>columns</code></td>
-          <td><code>columnas</code></td>
-          <td class="has-text-success has-text-centered">✅</td>
-        </tr>
-        <tr>
-          <td><code>grid</code></td>
-          <td><code>rejilla</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td rowspan="4">Layout</td>
-          <td><code>container</code></td>
-          <td><code>contenedor</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>level</code></td>
-          <td><code>nivel</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>media</code></td>
-          <td><code>media</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>hero</code></td>
-          <td><code>heroe</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td rowspan="3">Helpers</td>
-          <td><code>spacing</code></td>
-          <td><code>espaciado</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>visibility</code></td>
-          <td><code>visibilidad</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>flexbox</code></td>
-          <td><code>flexbox</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
+      <!-- Layout y Grid -->
+      <h4 class="title is-5 mt-5">Layout y Grid</h4>
+      <table class="table is-bordered is-striped is-hoverable is-narrow is-fullwidth">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Traducción</th>
+            <th>Est.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="has-background-light">
+            <th colspan="3">Grid</th>
+          </tr>
+          <tr>
+            <td><code>columns</code></td>
+            <td><code>columnas</code></td>
+            <td class="has-text-success has-text-centered">✅</td>
+          </tr>
+          <tr>
+            <td><code>grid</code></td>
+            <td><code>rejilla</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr class="has-background-light">
+            <th colspan="3">Layout</th>
+          </tr>
+          <tr>
+            <td><code>container</code></td>
+            <td><code>contenedor</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>level</code></td>
+            <td><code>nivel</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>media</code></td>
+            <td><code>media</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>hero</code></td>
+            <td><code>heroe</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr class="has-background-light">
+            <th colspan="3">Section</th>
+          </tr>
+          <tr>
+            <td><code>section</code></td>
+            <td><code>seccion</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>footer</code></td>
+            <td><code>pie</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>tiles</code></td>
+            <td><code>mosaicos</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        <!-- Elementos -->
-        <tr class="has-background-light">
-          <th colspan="4">Elementos</th>
-        </tr>
-        <tr>
-          <td rowspan="14">Elementos</td>
-          <td><code>button</code></td>
-          <td><code>boton</code></td>
-          <td class="has-text-success has-text-centered">✅</td>
-        </tr>
-        <tr>
-          <td><code>block</code></td>
-          <td><code>bloque</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>box</code></td>
-          <td><code>caja</code></td>
-          <td class="has-text-success has-text-centered">✅</td>
-        </tr>
-        <tr>
-          <td><code>content</code></td>
-          <td><code>contenido</code></td>
-          <td class="has-text-success has-text-centered">✅</td>
-        </tr>
-        <tr>
-          <td><code>delete</code></td>
-          <td><code>eliminar</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>icon</code></td>
-          <td><code>icono</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>image</code></td>
-          <td><code>imagen</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>loader</code></td>
-          <td><code>cargador</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>notification</code></td>
-          <td><code>notificacion</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>progress</code></td>
-          <td><code>progreso</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>table</code></td>
-          <td><code>tabla</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>tag</code></td>
-          <td><code>etiqueta</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>title</code></td>
-          <td><code>titulo</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>subtitle</code></td>
-          <td><code>subtitulo</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
+    <!-- COLUMNA 2: ELEMENTOS -->
+    <div class="column ">
+      <h4 class="title is-5">Elementos</h4>
+      <table class="table is-bordered is-striped is-hoverable is-narrow is-fullwidth">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Traducción</th>
+            <th>Est.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>box</code></td>
+            <td><code>caja</code></td>
+            <td class="has-text-success has-text-centered">✅</td>
+          </tr>
+          <tr>
+            <td><code>button</code></td>
+            <td><code>boton</code></td>
+            <td class="has-text-success has-text-centered">✅</td>
+          </tr>
+          <tr>
+            <td><code>content</code></td>
+            <td><code>contenido</code></td>
+            <td class="has-text-success has-text-centered">✅</td>
+          </tr>
+          <tr>
+            <td><code>delete</code></td>
+            <td><code>eliminar</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>icon</code></td>
+            <td><code>icono</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>image</code></td>
+            <td><code>imagen</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>notification</code></td>
+            <td><code>notificacion</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>progress</code></td>
+            <td><code>progreso</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>table</code></td>
+            <td><code>tabla</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>tag</code></td>
+            <td><code>etiqueta</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>title</code></td>
+            <td><code>titulo</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>block</code></td>
+            <td><code>bloque</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-        <!-- Formularios -->
-        <tr class="has-background-light">
-          <th colspan="4">Formularios</th>
-        </tr>
-        <tr>
-          <td rowspan="8">Form</td>
-          <td><code>input</code></td>
-          <td><code>entrada</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>textarea</code></td>
-          <td><code>area-texto</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>select</code></td>
-          <td><code>selector</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>checkbox</code></td>
-          <td><code>casilla</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>radio</code></td>
-          <td><code>radio</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>file</code></td>
-          <td><code>archivo</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>label</code></td>
-          <td><code>etiqueta-campo</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>field</code></td>
-          <td><code>campo</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        
-        <!-- Componentes -->
-        <tr class="has-background-light">
-          <th colspan="4">Componentes</th>
-        </tr>
-        <tr>
-          <td rowspan="10">Components</td>
-          <td><code>breadcrumb</code></td>
-          <td><code>migas</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>card</code></td>
-          <td><code>tarjeta</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>dropdown</code></td>
-          <td><code>desplegable</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>menu</code></td>
-          <td><code>menu</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>message</code></td>
-          <td><code>mensaje</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>modal</code></td>
-          <td><code>modal</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>navbar</code></td>
-          <td><code>barra-navegacion</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>pagination</code></td>
-          <td><code>paginacion</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>panel</code></td>
-          <td><code>panel</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-        <tr>
-          <td><code>tabs</code></td>
-          <td><code>pestanas</code></td>
-          <td class="has-text-danger has-text-centered">❌</td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- COLUMNA 3: FORMULARIOS Y COMPONENTES -->
+    <div class="column ">
+      <!-- Formularios -->
+      <h4 class="title is-5">Formularios</h4>
+      <table class="table is-bordered is-striped is-hoverable is-narrow is-fullwidth">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Traducción</th>
+            <th>Est.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>input</code></td>
+            <td><code>entrada</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>textarea</code></td>
+            <td><code>area-texto</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>select</code></td>
+            <td><code>selector</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>checkbox</code></td>
+            <td><code>casilla</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>radio</code></td>
+            <td><code>radio</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>file</code></td>
+            <td><code>archivo</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>label</code></td>
+            <td><code>etiqueta</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>field</code></td>
+            <td><code>campo</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Componentes -->
+      <h4 class="title is-5 mt-5">Componentes</h4>
+      <table class="table is-bordered is-striped is-hoverable is-narrow is-fullwidth">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Traducción</th>
+            <th>Est.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>breadcrumb</code></td>
+            <td><code>migas</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>card</code></td>
+            <td><code>tarjeta</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>dropdown</code></td>
+            <td><code>desplegable</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>menu</code></td>
+            <td><code>menu</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>message</code></td>
+            <td><code>mensaje</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>modal</code></td>
+            <td><code>modal</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>navbar</code></td>
+            <td><code>barra-nav</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>pagination</code></td>
+            <td><code>paginacion</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>panel</code></td>
+            <td><code>panel</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>tabs</code></td>
+            <td><code>pestanas</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+          <tr>
+            <td><code>subtitle</code></td>
+            <td><code>subtitulo</code></td>
+            <td class="has-text-danger has-text-centered">❌</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  
+
   <h2 class="title is-3 mt-5">Componentes Implementados</h2>
   <h3 class="title is-4">Botones</h3>
   <p>
-    El componente <code>button</code> fue el primero en ser traducido como prueba piloto. A continuación se muestra una comparación entre botones usando las clases originales en inglés (<code>button</code>, <code>is-*</code>) y sus alias en español (<code>boton</code>, <code>es-*</code>).
+    El componente <code>button</code> fue el primero en ser traducido como prueba piloto. A continuación se muestra una
+    comparación entre botones usando las clases originales en inglés (<code>button</code>, <code>is-*</code>) y sus
+    alias en español (<code>boton</code>, <code>es-*</code>).
   </p>
   <div class="buttons">
     <button class="button">Button (inglés)</button>
@@ -533,9 +593,11 @@ breadcrumb:
 
   <!-- SISTEMA DE COLUMNAS -->
   <h2 class="title is-3 mt-6">Sistema de Columnas</h2>
-  <p>A continuación se muestra una comparación del sistema de columnas usando las clases originales en inglés (<code>columns</code>,
+  <p>A continuación se muestra una comparación del sistema de columnas usando las clases originales en inglés
+    (<code>columns</code>,
     <code>column</code>, <code>is-*</code>) y sus alias en español (<code>columnas</code>, <code>columna</code>,
-    <code>es-*</code>).</p>
+    <code>es-*</code>).
+  </p>
 
   <!-- Tabla de comparación -->
   <h3 class="title is-4 mt-5">Clases Base</h3>
@@ -619,7 +681,7 @@ breadcrumb:
         <td>Columna de 1/2 (50%)</td>
       </tr>
       <tr>
-        <td><code>is-one-third</code></td>
+        <td><code></code></td>
         <td><code>es-un-tercio</code></td>
         <td>Columna de 1/3 (33.33%)</td>
       </tr>
@@ -702,7 +764,8 @@ breadcrumb:
   <h3 class="title is-5 mt-4">Ejemplo Responsivo</h3>
   <div class="message is-info">
     <div class="message-body">
-      <p>Este ejemplo tendrá una columna en móvil, dos columnas en tableta y tres columnas en escritorio y pantallas mayores.</p>
+      <p>Este ejemplo tendrá una columna en móvil, dos columnas en tableta y tres columnas en escritorio y pantallas
+        mayores.</p>
     </div>
   </div>
 
@@ -777,13 +840,13 @@ breadcrumb:
     <div class="column">
       <h5 class="title is-5">Inglés</h5>
       <pre><code class="language-html">&lt;div class="columns is-multiline is-mobile"&gt;
-  &lt;div class="column is-half-mobile is-one-third-tablet"&gt;
+  &lt;div class="column is-half-mobile -tablet"&gt;
     &lt;!-- Contenido --&gt;
   &lt;/div&gt;
-  &lt;div class="column is-half-mobile is-one-third-tablet"&gt;
+  &lt;div class="column is-half-mobile -tablet"&gt;
     &lt;!-- Contenido --&gt;
   &lt;/div&gt;
-  &lt;div class="column is-full-mobile is-one-third-tablet"&gt;
+  &lt;div class="column is-full-mobile -tablet"&gt;
     &lt;!-- Contenido --&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -807,7 +870,9 @@ breadcrumb:
   <!-- BOX/CAJA -->
   <h2 class="title is-3 mt-5">Caja</h2>
   <p>
-    El componente <code>box</code> es un contenedor simple con sombra y esquinas redondeadas. A continuación se muestra una comparación entre cajas usando las clases originales en inglés (<code>box</code>) y sus alias en español (<code>caja</code>).
+    El componente <code>box</code> es un contenedor simple con sombra y esquinas redondeadas. A continuación se muestra
+    una comparación entre cajas usando las clases originales en inglés (<code>box</code>) y sus alias en español
+    (<code>caja</code>).
   </p>
 
   <div class="columns">
@@ -859,8 +924,10 @@ breadcrumb:
   <!-- CONTENT/CONTENIDO -->
   <h2 class="title is-3 mt-5">Contenido</h2>
   <p>
-    El componente <code>content</code> es un contenedor que aplica estilos de texto predefinidos para elementos HTML comunes en bloques de texto.
-    A continuación se muestra una comparación entre contenido usando las clases originales en inglés (<code>content</code>) y sus alias en español (<code>contenido</code>), incluyendo los modificadores de tamaño.
+    El componente <code>content</code> es un contenedor que aplica estilos de texto predefinidos para elementos HTML
+    comunes en bloques de texto.
+    A continuación se muestra una comparación entre contenido usando las clases originales en inglés
+    (<code>content</code>) y sus alias en español (<code>contenido</code>), incluyendo los modificadores de tamaño.
   </p>
 
   <div class="columns">
@@ -971,8 +1038,10 @@ breadcrumb:
   <!-- HELPERS DE COLOR -->
   <h2 class="title is-3 mt-5">Helpers de Color</h2>
   <p>
-    Los helpers de color son clases de utilidad que permiten aplicar rápidamente colores a textos y fondos. Se han implementado
-    traducciones para todas las variantes existentes, incluyendo las modificaciones de tono (claro, oscuro), intensidad (suave, fuerte)
+    Los helpers de color son clases de utilidad que permiten aplicar rápidamente colores a textos y fondos. Se han
+    implementado
+    traducciones para todas las variantes existentes, incluyendo las modificaciones de tono (claro, oscuro), intensidad
+    (suave, fuerte)
     y todas las variaciones numéricas (00-100).
   </p>
 
@@ -1080,6 +1149,107 @@ breadcrumb:
     Fondo éxito claro, texto éxito oscuro
   &lt;/p&gt;
 &lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <!-- SISTEMA CENTRALIZADO DE TRADUCCIONES -->
+  <h2 id="sistema-centralizado" class="title is-3 mt-5">Sistema Centralizado de Traducciones</h2>
+  <p>
+    Para mejorar la mantenibilidad, consistencia y escalabilidad de las traducciones, hemos implementado un sistema
+    centralizado
+    en el archivo <code>sass/utilities/translations.scss</code> que todos los componentes pueden utilizar.
+  </p>
+
+  <div class="columns">
+    <div class="column">
+      <h3 class="title is-4">Mapas de Traducción</h3>
+      <p>El sistema incluye mapas de traducción para distintas categorías:</p>
+      <div class="content">
+        <pre><code class="language-scss">// Mapa de traducciones para colores
+$color-translations: (
+  "primary": "primario",
+  "link": "enlace",
+  "info": "info",
+  "success": "exito",
+  "warning": "advertencia",
+  "danger": "peligro",
+  // etc.
+);
+
+// Mapa de traducciones para tamaños
+$size-translations: (
+  "small": "pequeno",
+  "normal": "normal",
+  "medium": "mediano",
+  "large": "grande"
+);</code></pre>
+      </div>
+    </div>
+    <div class="column">
+      <h3 class="title is-4">Funciones de Traducción</h3>
+      <p>El sistema proporciona funciones para obtener traducciones:</p>
+      <div class="content">
+        <pre><code class="language-scss">@function translate-color($name) {
+  @if map.has-key($color-translations, $name) {
+    @return map.get($color-translations, $name);
+  }
+  @return $name; // Fallback al original
+}
+
+@function translate-size($name) {
+  @if map.has-key($size-translations, $name) {
+    @return map.get($size-translations, $name);
+  }
+  @return $name; // Fallback al original
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="title is-4 mt-4">Implementación en Componentes</h3>
+  <p>
+    Los componentes pueden importar y usar este sistema para generar dinámicamente sus clases en español:
+  </p>
+  <div class="content">
+    <pre><code class="language-scss">// En elements/button.scss
+@use "../utilities/translations" as trans;
+
+// Botón individual
+.boton {
+  @extend .button;
+
+  // Generar modificadores de color usando el sistema centralizado
+  @each $name, $color in $colors {
+    $spanish-name: trans.translate-color($name);
+    &.es-#{$spanish-name} {
+      @extend .is-#{$name};
+    }
+  }
+}</code></pre>
+  </div>
+
+  <h3 class="title is-4 mt-4">Ventajas del Sistema Centralizado</h3>
+  <div class="columns">
+    <div class="column">
+      <div class="notification is-success is-light">
+        <h4 class="title is-5">Consistencia</h4>
+        <p>Todas las traducciones se definen en un solo lugar, garantizando coherencia en todo el framework.</p>
+      </div>
+      <div class="notification is-success is-light">
+        <h4 class="title is-5">Mantenibilidad</h4>
+        <p>Para añadir nuevas traducciones, solo hay que editar un mapa centralizado, no cada componente individual.</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="notification is-success is-light">
+        <h4 class="title is-5">Extensibilidad</h4>
+        <p>Si se añaden nuevos colores o propiedades al framework original, se traducirán automáticamente.</p>
+      </div>
+      <div class="notification is-success is-light">
+        <h4 class="title is-5">Compatibilidad</h4>
+        <p>Usa sintaxis moderna de Sass como <code>map.has-key</code> y <code>map.get</code> para evitar warnings de
+          deprecación.</p>
+      </div>
     </div>
   </div>
 
